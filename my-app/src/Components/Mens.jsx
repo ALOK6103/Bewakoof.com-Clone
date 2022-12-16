@@ -1,5 +1,7 @@
 import {useState,useEffect} from "react"
 import MensCard from "./MensCard"
+import { SimpleGrid,Box } from "@chakra-ui/react"
+import styles from "./Product.module.css"
 //import module "./Product.css"
 
 const getData=async()=>{
@@ -29,25 +31,25 @@ const Mens=()=>{
    
     return (
 
-        <div  style={{overflow:"hidden" , marginTop:"30px" ,marginLeft:"20px" }}>
-        <h1 style={{marginLeft:"-1200px"  , color:"#30363C" , fontFamily:"sans-serif" , fontSize:"26px"}}>Shop by Categories</h1>
+        <div  style={{overflow:"hidden" , marginTop:"30px" ,marginLeft:"40px" }}>
+        <h1 style={{marginLeft:"-1200px"  , color:"#30363C" , fontFamily:"sans-serif" , fontSize:"26px",marginBottom:"20px"}}>Shop by Categories</h1>
 
        
         
 
-        <div  style={{ overflow:"auto",display:"grid",gridTemplateColumns:"repeat(5,1fr)", width:"95%", margin:"auto" , gap:"20px" , marginTop:"20px" ,  }} >
-         
+        <div   >
+         <SimpleGrid minChildWidth={"250px"} >
             {banner.map((el,i)=>{
          
 
-                return (
-                    
+                return  <Box className={styles.container} style={{marginBottom:"20px"}}>
                 <MensCard  key={i+1} image={el.image} title={el.title} price={el.price}></MensCard>
+                </Box>
                 
-                )
                
             })}
-            </div>
+        </SimpleGrid>
+        </div>
         </div>
         
        

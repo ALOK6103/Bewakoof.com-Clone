@@ -33,6 +33,12 @@ const Navbar=()=>{
     console.log("hello")
   }
 
+  const handleClickC = () => {
+
+    window.location.href = "/cart"
+    console.log("hello")
+  }
+
   const handleClickHome = () => {
 
     window.location.href = "/"
@@ -47,7 +53,7 @@ const Navbar=()=>{
     <div style={{ marginTop: "15px" }} onClick={handleClick}>Mens</div>
     <div style={{ marginTop: "15px" }} onClick={handleClickW}>Womens</div>
     <div style={{ marginTop: "12px" }}><Button colorScheme='orange'>Login</Button></div>
-    <div style={{ marginTop: "12px", marginLeft: "-150px" }}><button><img style={{ width: "35px", height: "35px", marginLeft: "80px" }} src='https://img.icons8.com/ios-glyphs/512/shopping-cart.png' alt='pic' /></button></div>
+    <div style={{ marginTop: "12px", marginLeft: "-150px" }}  onClick={handleClickC} ><button><img style={{ width: "35px", height: "35px", marginLeft: "80px" }} src='https://img.icons8.com/ios-glyphs/512/shopping-cart.png' alt='pic' /></button></div>
   </div>
   )
 }
