@@ -1,4 +1,4 @@
-.container {
+/* .container {
     width: 300px;
     height: 300px;
     position: absolute;
@@ -6,15 +6,15 @@
     left: 50%;
     transform: translate(-50%,-50%);
     overflow: hidden;
-  }
+  } */
   
-  img {
+  /* img {
     width: 100%;
     height: 100%;
     transition: all 1000ms;
-  }
+  } */
   
-  span {
+  /* span {
     position: absolute;
     bottom: 30px;
     font-size: 36px;
@@ -23,13 +23,13 @@
     opacity: 1;
     transition: all 1000ms;
   }
-  
+   */
   .container:hover img {
     transform: scale(1.1);
     filter: brightness(.5);
   }
   
-  .container:hover span {
+  /* .container:hover span {
     transform: translateY(-250px);
     font-size: 25px;
-  }
+  } */
