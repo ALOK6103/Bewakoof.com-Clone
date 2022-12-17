@@ -3,6 +3,7 @@ import { Flex, Box, Button } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 //import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
 // And react-slick as our Carousel Lib
+import styles from "./Product.module.css"
 import Slider from 'react-slick';
 
 // Settings for the slider
@@ -44,6 +45,17 @@ const Navbar=()=>{
     window.location.href = "/"
     console.log("hello")
   }
+
+  const handleClickS = () => {
+
+    window.location.href = "/signup"
+    console.log("hello")
+  }
+  const handleClickL = () => {
+
+    window.location.href = "/login"
+    console.log("hello")
+  }
   return(
     <div style={{ width: "98.5%", margin: "auto", display: "flex", justifyContent: "space-between", paddingLeft: "10px", paddingRight: "10px", marginBottom: "0px", backgroundColor: "  #f9eee5  ", top: "0px", position: "sticky", zIndex:"1" }}>
     <div style={{ width: "150px", height: "50px", marginTop: "13px" }}>
@@ -52,7 +64,8 @@ const Navbar=()=>{
     <div style={{ marginTop: "15px" }} onClick={handleClickHome}>Home</div>
     <div style={{ marginTop: "15px" }} onClick={handleClick}>Mens</div>
     <div style={{ marginTop: "15px" }} onClick={handleClickW}>Womens</div>
-    <div style={{ marginTop: "12px" }}><Button colorScheme='orange'>Login</Button></div>
+    <div style={{ marginTop: "12px" ,marginRight:"-180px"}} onClick={handleClickS} ><Button colorScheme='orange'>SignUp</Button></div>
+    <div style={{ marginTop: "12px" }} onClick={handleClickL}><Button colorScheme='orange' >Login</Button></div>
     <div style={{ marginTop: "12px", marginLeft: "-150px" }}  onClick={handleClickC} ><button><img style={{ width: "35px", height: "35px", marginLeft: "80px" }} src='https://img.icons8.com/ios-glyphs/512/shopping-cart.png' alt='pic' /></button></div>
   </div>
   )
@@ -332,32 +345,32 @@ export default function Home() {
       </div>
 
        <div style={{margin:"auto",justifyContent:"center",width:"99.5%"}}>
-       <h1 style={{fontSize:"22px"}}>NEW ARRIVALS</h1>
-      <div style={{display:"flex",margin:"auto",justifyContent:"center",width:"99.5%",marginLeft:"17px",gap:"3px"}} >
+       <h1 style={{fontSize:"22px", marginBottom:"12px"}}>NEW ARRIVALS</h1>
+      <div  style={{display:"flex",margin:"auto",justifyContent:"center",width:"99.5%",marginLeft:"17px",gap:"3px"}} >
         
-        <div style={{width:"20%",overflow:"hidden"}}>
-          <img style={{width:"90%",boxShadow: "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px"}}  src="https://images.bewakoof.com/t320/women-s-black-son-of-white-fang-graphic-printed-boyfriend-t-shirt-559343-1670598214-1.jpg" alt='pic' />
-          <p>Womens Black</p>
+        <div style={{width:"20%",overflow:"hidden" }}  className={styles.container}>
+          <img style={{width:"90%",boxShadow: "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px" ,marginBottom:"12px"}}  src="https://images.bewakoof.com/t320/women-s-black-son-of-white-fang-graphic-printed-boyfriend-t-shirt-559343-1670598214-1.jpg" alt='pic' />
+          <p >Womens Black</p>
           <b><h3>₹499</h3></b>
        
         </div>
-        <div style={{width:"20%"}}>
-        <img style={{width:"90%" ,boxShadow: "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px"}} src="https://images.bewakoof.com/t320/women-s-green-agents-graphic-printed-oversized-t-shirt-559344-1670604335-1.jpg" alt='pic' />
+        <div style={{width:"20%"}} className={styles.container}>
+        <img style={{width:"90%" ,boxShadow: "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px" ,marginBottom:"12px"}} src="https://images.bewakoof.com/t320/women-s-green-agents-graphic-printed-oversized-t-shirt-559344-1670604335-1.jpg" alt='pic' />
         <p>Womens Green</p>
         <b><h3>₹599</h3></b>
         </div>
-        <div style={{width:"20%"}}>
-        <img style={{width:"90%" ,boxShadow: "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px"}} src="https://images.bewakoof.com/t320/men-s-white-travelling-cat-plus-size-round-neck-t-shirt-555550-1669103378-1.jpg" alt='pic' />
+        <div style={{width:"20%"}} className={styles.container}>
+        <img style={{width:"90%" ,boxShadow: "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px" ,marginBottom:"12px"}} src="https://images.bewakoof.com/t320/men-s-white-travelling-cat-plus-size-round-neck-t-shirt-555550-1669103378-1.jpg" alt='pic' />
         <p>Mens White</p>
         <b><h3>₹699</h3></b>
         </div>
-        <div style={{width:"20%"}}>
-        <img style={{width:"90%" ,boxShadow: "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px"}} src="https://images.bewakoof.com/t320/men-s-black-son-of-white-fang-graphic-printed-oversized-t-shirt-559345-1670598122-1.jpg" alt='pic' />
+        <div style={{width:"20%"}} className={styles.container}>
+        <img style={{width:"90%" ,boxShadow: "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px" ,marginBottom:"12px"}} src="https://images.bewakoof.com/t320/men-s-black-son-of-white-fang-graphic-printed-oversized-t-shirt-559345-1670598122-1.jpg" alt='pic' />
         <p>Mens Black</p>
         <b><h3>₹500</h3></b>
         </div>
-        <div style={{width:"20%"}}>
-        <img style={{width:"90%" ,boxShadow: "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px"}} src="https://images.bewakoof.com/t320/men-s-blue-son-of-white-fang-graphic-printed-oversized-t-shirt-559350-1670598498-1.jpg" alt='pic' />
+        <div style={{width:"20%"}} className={styles.container}>
+        <img style={{width:"90%" ,boxShadow: "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px" ,marginBottom:"12px"}} src="https://images.bewakoof.com/t320/men-s-blue-son-of-white-fang-graphic-printed-oversized-t-shirt-559350-1670598498-1.jpg" alt='pic' />
         <p>Mens Purple</p>
        <b><h3>₹489</h3></b> 
         </div>
