@@ -1,9 +1,9 @@
-import {
-    Alert,
-    AlertIcon,
-    AlertTitle,
-    AlertDescription,
-} from '@chakra-ui/react'
+// import {
+//     Alert,
+//     AlertIcon,
+//     AlertTitle,
+//     AlertDescription,
+// } from '@chakra-ui/react'
 import {Button} from "@chakra-ui/react"
 let i=0
 const MensCard=({id,image,title,price})=>{
