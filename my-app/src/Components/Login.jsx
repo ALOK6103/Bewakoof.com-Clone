@@ -54,35 +54,31 @@ const Login=()=>{
         }
     }
 
-    // for(let i=0;i<banner.length;i++){
-    //     console.log(banner[i].name)
-    // }
-
-    //  handleformSubmit=(e)=>{
-    //     e.preventDefault()
-        
-    //  if(e.target.type==="email"){
-    //     console.log(e.target.value)
-    //  }
-    //     const
-    // }
-
+    
     const handleChange = (e) => {
-    
-
         const val = e.target.type === "checkbox" ? e.target.checked : e.target.value
-        console.log(val)
-    
+       // console.log(val)
         dispatch({ type: e.target.name, payload: val })
+        //console.log(submittedData)
     
       }
 
     const handleSubmit = (e) => {
         e.preventDefault()
         setSubmittedData([...submittedData,state])
-        console.log(submittedData)
+        //console.log(submittedData)
+        {for(let i=0;i<banner.length;i++){
+          if(banner[i].email===submittedData[submittedData.length-1].email){
+            alert("pass")
+           { window.location.href = "/cart"}
+          }
+         }}
+       
         dispatch({ type: "reset" })
-      }
+    }
+    
+     
+    console.log(submittedData)
 
     return (
 

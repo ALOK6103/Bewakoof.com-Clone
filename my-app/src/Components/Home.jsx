@@ -66,7 +66,7 @@ const Navbar=()=>{
     <div style={{ marginTop: "15px" }} onClick={handleClickW}>Womens</div>
     <div style={{ marginTop: "12px" ,marginRight:"-180px"}} onClick={handleClickS} ><Button colorScheme='orange'>SignUp</Button></div>
     <div style={{ marginTop: "12px" }} onClick={handleClickL}><Button colorScheme='orange' >Login</Button></div>
-    <div style={{ marginTop: "12px", marginLeft: "-150px" }}  onClick={handleClickC} ><button><img style={{ width: "35px", height: "35px", marginLeft: "80px" }} src='https://img.icons8.com/ios-glyphs/512/shopping-cart.png' alt='pic' /></button></div>
+    <div style={{ marginTop: "12px", marginLeft: "-150px" }}   ><button><img style={{ width: "35px", height: "35px", marginLeft: "80px" }} src='https://img.icons8.com/ios-glyphs/512/shopping-cart.png' alt='pic' /></button></div>
   </div>
   )
 }
@@ -614,9 +614,38 @@ export default function Home() {
         </div>
       </div>
 
-     <div style={{width:"99.5%" , margin:"auto", marginLeft:"20px",marginTop:"10px"}}>
+     <div style={{width:"99.5%" , margin:"auto", marginLeft:"3px",marginTop:"10px"}}>
       <img style={{width:"97.6%" , margin:"auto"}} src='https://images.bewakoof.com/uploads/grid/app/Desktop-Strip-Common-1669986431.jpg' alt="pic" />
      </div>
+     <div style={{display:"flex" ,width:"97%"  , margin:"auto" ,marginTop:"0px" , gap:"300px" , backgroundColor:"#181818" ,marginBottom:"20px",paddingTop:"50px",paddingBottom:"50px" }}>
+            <div style={{ marginLeft:"200px",color:"white" }}>
+                <b style={{color:"yellow"}}><h4>COMPANY</h4></b>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Blog</p>
+                <p>Partner with PharmEasy</p>
+                <p>Sell at PharmEasy</p>
+                
+            </div>
+            <div style={{ color:"white" }}>
+            <b style={{color:"yellow",}}><h4>FEATURED CATEGORIES</h4></b>
+                <p>Men's New Arrivals</p>
+                <p>Men's Plain T-shirts</p>
+                <p>Women's Top Wear</p>
+                <p>Women's T-Shirts</p>
+                <p>Women's Nightwear</p>
+                
+            </div>
+            <div style={{ color:"white" }}>
+            <b style={{color:"yellow" }}><h4>CUSTOMER SERVICE</h4></b>
+                <p>Contact Us</p>
+                <p>Track Order</p>
+                <p>Return Order</p>
+                <p>Cancel Order</p>
+                <p>Browse All Stores</p>
+                
+            </div>
+        </div>
     </div>
   );
 }

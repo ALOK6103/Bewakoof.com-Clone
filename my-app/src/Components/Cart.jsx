@@ -1,6 +1,9 @@
 import React, { useState } from "react"
 import CartCard from "./CartCard"
 //import {Button} from "@chakra-ui/react"
+import Login from "./Login"
+
+
 let total = 0
 const Cart = () => {
     // const [toy,setToy]=useState()
@@ -32,8 +35,8 @@ const Cart = () => {
        setToy(newToy)
 
     }
-
-
+       
+    
     toy = JSON.parse(localStorage.getItem("products4")) || []
 
     return (
