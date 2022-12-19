@@ -69,7 +69,7 @@ const Login=()=>{
         //console.log(submittedData)
         {for(let i=0;i<banner.length;i++){
           if(banner[i].email===submittedData[submittedData.length-1].email){
-            alert("pass")
+            alert("Logged In")
            { window.location.href = "/cart"}
           }
          }}

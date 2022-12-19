@@ -21,7 +21,8 @@ function Signup() {
       body:JSON.stringify({name,email,password})
      })
      .then((res)=>res.json())
-     
+     alert("Signed In")
+     { window.location.href = "/login"}
    }
 
 
