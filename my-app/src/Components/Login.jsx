@@ -4,7 +4,7 @@ import { Link,useNavigate } from "react-router-dom";
 // import { SimpleGrid,Box } from "@chakra-ui/react"
 // import styles from "./Product.module.css"
 //import module "./Product.css"
-
+import { Button } from "@chakra-ui/react";
 const initialState = {
     email:"",
     password:""
@@ -82,7 +82,7 @@ const Login=()=>{
 
     return (
 
-        <div className="login-page" style={{width:"380px",margin:"auto",justifyContent:"center",padding:"10px",marginTop:"30px" , boxShadow:"rgba(0, 0, 0, 0.35) 0px 5px 15px",borderRadius:"5px"}}>
+        <div className="login-page" style={{width:"auto",margin:"auto",justifyContent:"center",padding:"10px",marginTop:"30px" ,borderRadius:"5px",marginBottom:"70px"}}>
 
 
       <form onSubmit={handleSubmit} className="form" >
@@ -112,9 +112,9 @@ const Login=()=>{
           </label>
         </div>
         <div>
-          <button style={{width:"150px",border:"1px solid black",padding:"10px" ,marginBottom:"10px",borderRadius:"5px",marginTop:"10px"}}  type="submit">
+          <Button style={{width:"150px",border:"1px solid black",padding:"10px" ,marginBottom:"10px",borderRadius:"5px",marginTop:"10px"}}  type="submit">
            <b>SUBMIT</b> 
-          </button>
+          </Button>
         </div>
       </form>
       <div>

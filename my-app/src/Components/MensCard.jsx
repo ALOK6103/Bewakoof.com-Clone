@@ -21,7 +21,7 @@ const MensCard=({id,image,title,price})=>{
 
     return (
 
-    <span  >
+    <span >
         <img  src={image} alt="pic" style={{height:"300px" , width:"250px" ,boxShadow: "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px" }} />
         <p style={{marginLeft:"-30px",marginTop:"10px"}}>{title}</p>
        

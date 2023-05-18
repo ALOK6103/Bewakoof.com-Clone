@@ -617,7 +617,7 @@ export default function Home() {
      <div style={{width:"99.5%" , margin:"auto", marginLeft:"3px",marginTop:"10px"}}>
       <img style={{width:"97.6%" , margin:"auto"}} src='https://images.bewakoof.com/uploads/grid/app/Desktop-Strip-Common-1669986431.jpg' alt="pic" />
      </div>
-     <div style={{display:"flex" ,width:"97%"  , margin:"auto" ,marginTop:"0px" , gap:"300px" , backgroundColor:"#181818" ,marginBottom:"20px",paddingTop:"50px",paddingBottom:"50px" }}>
+     {/* <div style={{display:"flex" ,width:"97%"  , margin:"auto" ,marginTop:"0px" , gap:"300px" , backgroundColor:"#181818" ,marginBottom:"20px",paddingTop:"50px",paddingBottom:"50px" }}>
             <div style={{ marginLeft:"200px",color:"white" }}>
                 <b style={{color:"yellow"}}><h4>COMPANY</h4></b>
                 <p>About Us</p>
@@ -645,7 +645,7 @@ export default function Home() {
                 <p>Browse All Stores</p>
                 
             </div>
-        </div>
+    </div> */}
     </div>
   );
 }
