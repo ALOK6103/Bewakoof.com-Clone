@@ -67,7 +67,7 @@ const Cart = () => {
 
     return (
         <div style={{ overflow: "hidden", marginTop: "30px", marginLeft: "20px" }}>
-            <h1 style={{ display:"flex", justifyContent:"left", color: "#30363C", fontFamily: "sans-serif", fontSize: "26px" }}>Shop by Categories</h1>
+            <h1 style={{ display:"flex", justifyContent:"left", color: "#30363C", fontFamily: "sans-serif", fontSize: "26px" }}>Cart Items</h1>
 
             <div style={{ overflow: "auto", display: "grid", gridTemplateColumns: "repeat(5,1fr)", width: "95%", margin: "auto", gap: "20px", marginTop: "20px", }} >
 
