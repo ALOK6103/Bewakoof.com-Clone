@@ -4,11 +4,23 @@ const WomensCard=({id,image,title,price})=>{
     
     const handleClick=()=>{
       
-        let toy=JSON.parse(localStorage.getItem("products4")) ||[] 
-        i=i+1
-        id=i
-       toy.push({id,price,title,image}) 
-       localStorage.setItem(("products4"),JSON.stringify(toy))
+    //     let toy=JSON.parse(localStorage.getItem("products4")) ||[] 
+    //     i=i+1
+    //     id=i
+    //    toy.push({id,price,title,image}) 
+    //    localStorage.setItem(("products4"),JSON.stringify(toy))
+
+    let payload={id,price,title,image}
+
+      fetch("https://alok-verma-rct.onrender.com/bewakoofCart",{
+        method:"POST",
+        body:JSON.stringify(payload),
+        headers:{
+          "Content-Type":"Application/json"
+        }
+      })
+      
+       alert("Product Added to Cart")
      }
 
     return (

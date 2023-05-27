@@ -4,18 +4,31 @@
 //     AlertTitle,
 //     AlertDescription,
 // } from '@chakra-ui/react'
-import {Button} from "@chakra-ui/react"
-let i=0
+import {Button, Toast} from "@chakra-ui/react"
+// let i=0
 const MensCard=({id,image,title,price})=>{
     
     const handleClick=()=>{
-       //{<Alert status='success'><AlertIcon />added</Alert>}
-      let toy=JSON.parse(localStorage.getItem("products4")) ||[] 
-      i=i+1
-      id=i
-      toy.push({id,price,title,image}) 
-      localStorage.setItem(("products4"),JSON.stringify(toy))
-      //alert("Added")
+    //    //{<Alert status='success'><AlertIcon />added</Alert>}
+    //   let toy=JSON.parse(localStorage.getItem("products4")) ||[] 
+    // //   i=i+1
+    // //   id=i
+    //   toy.push({id,price,title,image}) 
+    //   localStorage.setItem(("products4"),JSON.stringify(toy))
+    //   //alert("Added")
+
+    let payload={id,price,title,image}
+
+      fetch("https://alok-verma-rct.onrender.com/bewakoofCart",{
+        method:"POST",
+        body:JSON.stringify(payload),
+        headers:{
+          "Content-Type":"Application/json"
+        }
+      })
+    
+
+      alert("Product Added to Cart")
       
     }
 

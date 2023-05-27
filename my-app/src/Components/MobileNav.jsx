@@ -71,7 +71,7 @@ import {
               fontWeight={400}
               variant={'link'}
               href={'/login'}>
-              Sign In
+             <b>Sign In</b>
             </Button>
             <Button
               as={'a'}
@@ -84,7 +84,7 @@ import {
               _hover={{
                 bg: 'pink.300',
               }}>
-              Sign Up
+              <b>Sign Up</b>
             </Button>
           </Stack>
         </Flex>
@@ -155,6 +155,7 @@ import {
         <Stack direction={'row'} align={'center'}>
           <Box>
             <Text
+            
               transition={'all .3s ease'}
               _groupHover={{ color: 'pink.400' }}
               fontWeight={500}>
@@ -207,7 +208,7 @@ import {
           <Text
             fontWeight={600}
             color={useColorModeValue('gray.600', 'gray.200')}>
-            {label}
+            <b>{label}</b>
           </Text>
           {children && (
             <Icon

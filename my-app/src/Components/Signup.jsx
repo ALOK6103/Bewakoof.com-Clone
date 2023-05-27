@@ -22,13 +22,13 @@ function Signup() {
       body:JSON.stringify({name,email,password})
      })
      .then((res)=>res.json())
-     alert("Signed In")
+     alert("SignUp Success")
      { window.location.href = "/login"}
    }
 
 
   return (
-    <div className="login-page" style={{width:"auto",margin:"auto",justifyContent:"center",padding:"10px",marginTop:"30px" , borderRadius:"5px",marginBottom:"70px"}}
+    <div className="login-page" style={{width:"auto",margin:"auto",justifyContent:"center",padding:"10px",marginTop:"30px",marginBottom:"70px"}}
     value={name}>
       <form onSubmit={handleformSubmit} className="form" >
       <div >

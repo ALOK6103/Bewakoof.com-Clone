@@ -5,28 +5,10 @@ import { Link,useNavigate } from "react-router-dom";
 // import styles from "./Product.module.css"
 //import module "./Product.css"
 import { Button } from "@chakra-ui/react";
-const initialState = {
-    email:"",
-    password:""
-  };
+
   
   //should have the cases "name", "gender", "role", "maritalStatus", and "reset" along with the default cases
-  const reducer = (state, action) => {
-    switch (action.type) {
-      case "email": {
-        return { ...state, email: action.payload }
-      }
-      case "password": {
-        return { ...state, password: action.payload }
-      }
-      case "reset": {
-        return initialState
-      }
-      default: {
-        return state
-      }
-    }
-  };
+  
 
 const getData=async()=>{
     return fetch(
@@ -36,10 +18,9 @@ const getData=async()=>{
 
 const Login=()=>{
     const [banner,setBanner]=useState([])
-    const [submittedData,setSubmittedData] = useState([]);
-    const [state,dispatch] = useReducer(reducer,initialState)
-//     const [email,setEmail]=useState("")
-//    const [password,setPassword]=useState("")
+    
+    const [email,setEmail]=useState("")
+   const [password,setPassword]=useState("")
     useEffect(()=>{
        getApiData()
     },[])
@@ -55,37 +36,34 @@ const Login=()=>{
     }
 
     
-    const handleChange = (e) => {
-        const val = e.target.type === "checkbox" ? e.target.checked : e.target.value
-       // console.log(val)
-        dispatch({ type: e.target.name, payload: val })
-        //console.log(submittedData)
-    
-      }
 
     const handleSubmit = (e) => {
-        e.preventDefault()
-        setSubmittedData([...submittedData,state])
-        //console.log(submittedData)
-        {for(let i=0;i<banner.length;i++){
-          if(banner[i].email===submittedData[submittedData.length-1].email){
-            alert("Logged In")
-           { window.location.href = "/cart"}
+       e.preventDefault()
+       let p=false
+        for(let i=0;i<banner.length;i++){
+          if(banner[i].email==email && banner[i].password==password ){
+           p=true
+           let payload={email,password}
+            localStorage.setItem("bewakoof",JSON.stringify(payload))
+            console.log("matched")
+            window.location.href="/cart"
           }
-         }}
-       
-        dispatch({ type: "reset" })
+        }   
+       if(p==false){
+        alert("Wrong Credential")
+        window.location.href="/signup"
+       }
+        
     }
     
      
-    console.log(submittedData)
-
+   
     return (
 
         <div className="login-page" style={{width:"auto",margin:"auto",justifyContent:"center",padding:"10px",marginTop:"30px" ,borderRadius:"5px",marginBottom:"70px"}}>
 
 
-      <form onSubmit={handleSubmit} className="form" >
+      <form  className="form" >
       
         <div>
           <label>
@@ -94,7 +72,7 @@ const Login=()=>{
             style={{width:"280px",border:"1px solid black",padding:"10px",marginBottom:"10px",borderRadius:"5px" ,marginTop:"10px"}}
            
             name="email"
-            value={state.email} onChange={handleChange} 
+            value={email} onChange={(e)=>setEmail(e.target.value)} 
              type="email" placeholder="Email" />
           </label>
         </div>
@@ -105,14 +83,14 @@ const Login=()=>{
             style={{width:"280px",border:"1px solid black",padding:"10px" ,marginBottom:"10px",borderRadius:"5px",marginTop:"10px"}}
             
              name="password"
-             value={state.password} onChange={handleChange}           
+             value={password} onChange={(e)=>setPassword(e.target.value)}           
               type="password"
               placeholder="Password"
             />
           </label>
         </div>
         <div>
-          <Button style={{width:"150px",border:"1px solid black",padding:"10px" ,marginBottom:"10px",borderRadius:"5px",marginTop:"10px"}}  type="submit">
+          <Button style={{width:"150px",border:"1px solid black",padding:"10px" ,marginBottom:"10px",borderRadius:"5px",marginTop:"10px"}} onClick={handleSubmit}  type="submit">
            <b>SUBMIT</b> 
           </Button>
         </div>
